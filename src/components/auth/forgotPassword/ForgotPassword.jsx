@@ -20,7 +20,7 @@ const ForgotPassword = () => {
   return (
     <>
       <MUIStack className={classes.authWrapper}>
-        <MUIStack>
+        <MUIStack m="auto">
           <MUITypography variant="h3" color="black.main" mb={1}>
             Forgot Password
           </MUITypography>
@@ -70,7 +70,11 @@ const ForgotPassword = () => {
           </MUITypography>
         </MUIStack>
       </MUIStack>
-      <MUIDialog open={verifyEmail} maxWidth="xs">
+      <MUIDialog
+        onClose={() => setVerifyEmail(false)}
+        open={verifyEmail}
+        maxWidth="xs"
+      >
         <MUIStack className={classes.verifyEmailWrapper}>
           <img className={classes.logoWrapper} src={logo} alt="logo" />
           <MUITypography variant="h5" color="black.main" mb={1}>

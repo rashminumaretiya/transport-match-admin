@@ -21,7 +21,7 @@ const SignUp = () => {
   return (
     <>
       <MUIStack className={classes.authWrapper}>
-        <MUIStack>
+        <MUIStack m="auto">
           <img className={classes.logoWrapper} src={logo} alt="logo" />
           <MUITypography variant="h3" color="black.main" mb={3}>
             Sign Up for an Account

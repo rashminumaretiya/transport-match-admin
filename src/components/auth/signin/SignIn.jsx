@@ -20,7 +20,7 @@ const SignIn = () => {
   return (
     <>
       <MUIStack className={classes.authWrapper}>
-        <MUIStack>
+        <MUIStack m="auto">
           <img className={classes.logoWrapper} src={logo} alt="logo" />
           <MUITypography variant="h3" color="black.main" mb={1}>
             Sign In to your Account
