@@ -18,9 +18,7 @@ const OtpInput = ({ otp, setOtp }) => {
             lg: '65px !important',
           },
           margin: '0 5px', // Optional spacing between inputs
-          border: `1px solid ${theme.palette.pink.light100}`,
           borderRadius: '8px',
-          backgroundColor: theme.palette.pink.light,
           textAlign: 'center',
           fontSize: 30,
           color: theme.palette.primary.main,

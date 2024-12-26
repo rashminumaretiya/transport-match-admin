@@ -10,7 +10,7 @@ const PublicRoute = () => {
     if (token) navigate('/signin');
   }, [token, navigate]);
 
-  return <>{token ? <Outlet /> : <Navigate to="/signin" replace />}</>;
+  return <>{!token ? <Outlet /> : <Navigate to="/signin" replace />}</>;
 };
 
 export default PublicRoute;

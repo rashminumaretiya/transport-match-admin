@@ -4,6 +4,7 @@ const theme = createTheme({
   palette: {
     primary: {
       main: '#009FE3',
+      contrastText: '#ffffff',
     },
     secondary: {
       main: '#576F89',
@@ -42,13 +43,11 @@ const theme = createTheme({
         h3: {
           fontSize: 36,
           lineHeight: '1.25',
-          fontWeight: 700,
           '@media screen and (max-width: 575px)': {
             fontSize: 22,
           },
         },
         h5: {
-          fontWeight: 600,
           '@media screen and (max-width: 1199px)': {
             fontSize: 22,
           },

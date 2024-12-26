@@ -4,7 +4,7 @@ import { MUIStyled } from './MUIStyled';
 import MUIFormLabel from './MUIFormLabel';
 import theme from './theme';
 
-const TextField = MUIStyled(TF)(({ theme, position, bgColor }) => ({
+const TextField = MUIStyled(TF)(({ theme }) => ({
   marginTop: 0,
   marginBottom: 0,
   '& .MuiInputBase-root': {
@@ -13,10 +13,23 @@ const TextField = MUIStyled(TF)(({ theme, position, bgColor }) => ({
     '&.MuiOutlinedInput-root': {
       '& .MuiInputBase-input': {
         padding: 16,
-        fontWeight: 500,
         color: theme.palette.black.main,
+        '&:-webkit-autofill, &:-webkit-autofill:hover, &:-webkit-autofill:focus':
+          {
+            WebkitBoxShadow: `0 0 0px 40rem ${theme.palette.gray.light} inset`,
+            borderRadius: 6,
+          },
+        '&::-webkit-input-placeholder': {
+          color: theme.palette.gray.main,
+          opacity: 1,
+        },
+        '&:-ms-input-placeholder': {
+          color: theme.palette.gray.main,
+          opacity: 1,
+        },
         '&::placeholder': {
-          textTransform: 'capitalize',
+          color: theme.palette.gray.main,
+          opacity: 1,
         },
       },
       '& .MuiInputAdornment-root': {

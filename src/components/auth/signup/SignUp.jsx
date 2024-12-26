@@ -6,12 +6,13 @@ import logo from '../../../assets/svg/logo.svg';
 import MUIForm from '../../../shared/MUIForm';
 import MUITextField from '../../../shared/MUITextField';
 import { IconButton, InputAdornment } from '@mui/material';
-import { Email, EyeOff, EyeOn, Lock } from '../../../shared/icon';
+import { Email, EyeOff, EyeOn, Lock, User } from '../../../shared/icon';
 import { authStyle } from '../../../layout/auth.style';
-import MUICheckbox from '../../../shared/MUICheckbox';
 import MUIButton from '../../../shared/MUIButton';
+import MUICheckbox from '../../../shared/MUICheckbox';
+import MUIBox from '../../../shared/MUIBox';
 
-const SignIn = () => {
+const SignUp = () => {
   const classes = authStyle();
   const [showPassword, setShowPassword] = React.useState(false);
 
@@ -22,18 +23,22 @@ const SignIn = () => {
       <MUIStack className={classes.authWrapper}>
         <MUIStack>
           <img className={classes.logoWrapper} src={logo} alt="logo" />
-          <MUITypography variant="h3" color="black.main" mb={1}>
-            Sign In to your Account
-          </MUITypography>
-          <MUITypography
-            variant="body1"
-            mb={3}
-            color="gray.main"
-            fontWeight={500}
-          >
-            Welcome back! please enter your detail
+          <MUITypography variant="h3" color="black.main" mb={3}>
+            Sign Up for an Account
           </MUITypography>
           <MUIForm>
+            <MUITextField
+              placeholder="Username"
+              slotProps={{
+                input: {
+                  startAdornment: (
+                    <InputAdornment position="start">
+                      <User />
+                    </InputAdornment>
+                  ),
+                },
+              }}
+            />
             <MUITextField
               placeholder="Email"
               slotProps={{
@@ -66,19 +71,22 @@ const SignIn = () => {
                 },
               }}
             />
-            <MUIStack
-              direction="row"
-              justifyContent="space-between"
-              alignItems="center"
-              mb={2}
-            >
-              <MUICheckbox label="Remember me" />
-              <MUITypography className={classes.forgotLink}>
-                <RouteLink to="/forgot-password">Forgot Password?</RouteLink>
-              </MUITypography>
-            </MUIStack>
+            <MUITypography mb={1} color="gray.main" variant="body2">
+              Your password must have at least 8 characters
+            </MUITypography>
+            <MUIBox mb={3}>
+              <MUICheckbox
+                label={
+                  <>
+                    By creating an account means you agree to the{' '}
+                    <RouteLink>Terms & Conditions</RouteLink> and our{' '}
+                    <RouteLink>Privacy Policy</RouteLink>
+                  </>
+                }
+              />
+            </MUIBox>
             <MUIButton variant="contained" fullWidth>
-              Sign In
+              Sign Up
             </MUIButton>
           </MUIForm>
           <MUITypography
@@ -86,7 +94,7 @@ const SignIn = () => {
             variant="body2"
             className={classes.pageLink}
           >
-            Don't have an account?<RouteLink to="/signup">Sign up</RouteLink>
+            Already have an account?<RouteLink to="/signin">Sign in</RouteLink>
           </MUITypography>
         </MUIStack>
       </MUIStack>
@@ -94,4 +102,4 @@ const SignIn = () => {
   );
 };
 
-export default SignIn;
+export default SignUp;

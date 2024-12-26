@@ -3,25 +3,12 @@ import React from 'react';
 import { MUIStyled } from './MUIStyled';
 
 const StyledButton = MUIStyled(Button)(({ theme }) => ({
-  padding: '9.5px 20px',
-  '&.MuiButton-contained': {
-    borderRadius: '8px',
-    fontSize: 14,
-    fontWeight: 600,
-    lineHeight: '1.5',
-    width: '100%',
-  },
+  padding: '12px 20px',
+  fontSize: 16,
+  fontWeight: 600,
+  borderRadius: 8,
+  lineHeight: 'normal',
   '&.MuiButton-outlined': {
-    fontSize: 16,
-    fontWeight: 500,
-    lineHeight: '1.5',
-    padding: '7px 20px',
-    width: '100%',
-    color: 'black !important',
-    textTransform: 'none',
-    border: `1px solid ${theme.palette.pink.light100}`,
-    borderRadius: 8,
-    backgroundColor: 'transparent',
     '&:hover': {
       borderColor: theme.palette.primary.main,
     },

@@ -2,6 +2,8 @@ import React from 'react';
 import SignIn from '../components/auth/signin/SignIn';
 import PublicRoute from '../components/routeLayout/PublicRoute';
 import AuthLayout from '../layout/AuthLayout';
+import SignUp from '../components/auth/signup/SignUp';
+import ForgotPassword from '../components/auth/forgotPassword/ForgotPassword';
 
 export const publicRoute = [
   {
@@ -15,6 +17,14 @@ export const publicRoute = [
           {
             path: '/signin',
             element: <SignIn />,
+          },
+          {
+            path: '/signup',
+            element: <SignUp />,
+          },
+          {
+            path: '/forgot-password',
+            element: <ForgotPassword />,
           },
         ],
       },

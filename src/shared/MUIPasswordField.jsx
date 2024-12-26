@@ -10,7 +10,6 @@ const TextField = MUIStyled(TF)(({ theme, position, bgColor }) => ({
   marginBottom: 0,
   '& .MuiInputBase-root': {
     borderRadius: 8,
-    backgroundColor: theme.palette.pink.light,
     '&.MuiOutlinedInput-root .MuiInputBase-input': {
       fontSize: 14,
       lineHeight: '1.5',
