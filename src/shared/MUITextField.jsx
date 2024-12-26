@@ -10,7 +10,7 @@ const TextField = MUIStyled(TF)(({ theme, position, bgColor }) => ({
   '& .MuiInputBase-root': {
     borderRadius: 12,
     backgroundColor: theme.palette.gray.light,
-    '&.MuiOutlinedInput-root': { 
+    '&.MuiOutlinedInput-root': {
       '& .MuiInputBase-input': {
         padding: 16,
         fontWeight: 500,
@@ -20,8 +20,8 @@ const TextField = MUIStyled(TF)(({ theme, position, bgColor }) => ({
         },
       },
       '& .MuiInputAdornment-root': {
-        marginRight: 0
-      }
+        marginRight: 0,
+      },
     },
     '&.Mui-focused': {
       outline: '0',

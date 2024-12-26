@@ -1,12 +1,12 @@
 import React from 'react';
 import { Outlet } from 'react-router-dom';
 import MUIGrid from '../shared/MUIGrid';
-import authImage from '../assets/auth-img.jpg'
+import authImage from '../assets/auth-img.jpg';
 import MUIBox from '../shared/MUIBox';
 import { authStyle } from './auth.style';
 
 const AuthLayout = () => {
-  const classes = authStyle()
+  const classes = authStyle();
   return (
     <>
       <MUIGrid container>
